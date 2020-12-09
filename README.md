@@ -1,23 +1,25 @@
 # [Máster en Ingeniería Web por la Universidad Politécnica de Madrid (miw-upm)](http://miw.etsisi.upm.es)
-# Back-end con Tecnologías de Código Abierto: **SPRING**
-> Proyecto TPV. Este proyecto es un apoyo docente de la asignatura. Es una aplicación completa realizada con un Front-end: Angular
- y dos Back-ends: Spring. El Back-end-user se desarrolla con programación síncrona y Postgresql. El Back-end-core se
- realiza con programación reactiva y MongoDB.
+# Back-end con Tecnologías de Código Abierto: **SPRING & PYTHON**
+> Proyecto TPV. Este proyecto es un apoyo docente de la asignatura. Es una aplicación completa realizada con un Front-end con Angular, 
+dos Back-ends con Spring y un Back-end con Python. El Back-end-user se desarrolla con programación síncrona y Postgresql. El Back-end-core se
+ realiza con programación reactiva y MongoDB. El Back-end-customer-support con programación síncrona y MongoDB
 
 ## Tecnologías necesarias
-`Java` `Maven` `Spring-Boot` `Reactor` `Angular` `MondoDB` `JPA` `SQL` `GitHub` `Travis-CI` `Sonarcloud` `Better Code Hub` `Heroku`
+`Java` `Maven` `Spring-Boot` `Reactor` `Python` `Angular` `MondoDB` `JPA` `SQL` `GitHub` `Travis-CI` `Sonarcloud` `Better Code Hub` `Heroku`
 
 ## Estado del código
 Proyecto | GitHub - CI | Sonarcloud
 -- | -- | --
 Front-end-angular | [![Angular - Build](https://github.com/miw-upm/betca-tpv-angular/workflows/Angular%20-%20Build/badge.svg)](https://github.com/miw-upm/betca-tpv-angular/actions) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Abetca-tpv-angular&metric=alert_status)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Abetca-tpv-angular)
-Back-end-user | [![TPV User](https://github.com/miw-upm/betca-tpv-user/workflows/TPV%20User/badge.svg)](https://github.com/miw-upm/betca-tpv-user/actions) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Abetca-tpv-user&metric=alert_status)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Abetca-tpv-user)
-Back-end-core | [![CI - Test](https://github.com/miw-upm/betca-tpv-core/workflows/CI%20-%20Test/badge.svg)](https://github.com/miw-upm/betca-tpv-core/actions) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Abetca-tpv-core&metric=alert_status)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Abetca-tpv-core) 
+Back-end-user | [![Spring User - Tests](https://github.com/miw-upm/betca-tpv-user/workflows/Spring%20User%20-%20Tests/badge.svg)](https://github.com/miw-upm/betca-tpv-user/actions) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Abetca-tpv-user&metric=alert_status)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Abetca-tpv-user)
+Back-end-core | [![Spring Core - Tests](https://github.com/miw-upm/betca-tpv-core/workflows/Spring%20Core%20-%20Tests/badge.svg)](https://github.com/miw-upm/betca-tpv-core/actions) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Abetca-tpv-core&metric=alert_status)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Abetca-tpv-core) 
+Back-end-customer-support | [![Python Customer Support - Tests](https://github.com/miw-upm/betca-tpv-customer-support/workflows/Python%20Customer%20Support%20-%20Tests/badge.svg)](https://github.com/miw-upm/betca-tpv-customer-support/actions) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Abetca-tpv-customer-support&metric=alert_status)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Abetca-tpv-customer-support)
 
 ## :octocat: Repositorios
 * [Front-end-angular](https://github.com/miw-upm/betca-tpv-angular)
 * [Back-end-user](https://github.com/miw-upm/betca-tpv-user)
 * [Back-end-core](https://github.com/miw-upm/betca-tpv-core)
+* [Back-end-customer-support](https://github.com/miw-upm/betca-tpv-customer-support)
 
 ## :gear: Instalación del proyecto
 1. Clonar repositorios, **mediante consola**:
@@ -39,20 +41,110 @@ betca-tpv-angular> npm install
 > git clone https://github.com/miw-upm/betca-tpv-core
 ```   
 
+   * betca-tpv-customer-support
+```sh
+> cd <folder path>
+> git clone https://github.com/miw-upm/betca-tpv-customer-support
+> cd betca-tpv-customer-support
+> venv\Scripts\activate.bat
+(venv) > pip install -r requirements.txt
+```
+
 2. Importar el proyecto `betca-tpv-angular` mediante **WebStorm** 
    * **Open**, y seleccionar la carpeta del proyecto.
 3. Importar los proyectos `betca-tpv-user` & `betca-tpv-core` mediante **IntelliJ** 
    1. **Import Project**, y seleccionar la carpeta del proyecto.
    1. Marcar **Create Project from external model**, elegir **Maven**.
    1. **Next** … **Finish**.
-
-4. Ejecución
+4. Importar el proyecto `betca-tpv-customer-support` mediante **PyCharm**
+   * **Open**, y seleccionar la carpeta del proyecto.
+5. Ejecución
    * Ejecución de test: se utiliza MongoDB embebido y H2 embebido
    * Ejecución en local:
-      1. BBDD. Se debe tener arrancado el motor de MongoDB: `mongodb://localhost:27017/tpv`, y el motor de 
-      Postgresql: `spring.datasource.url=jdbc:postgresql://localhost:5432/tpv`
+      1. BBDD. Se debe tener arrancado el motor de MongoDB: `mongodb://localhost:27017/tpv` & `mongodb://localhost:27017/tpv2`,
+      y el motor de Postgresql: `spring.datasource.url=jdbc:postgresql://localhost:5432/tpv`
       2. Spring. Ejecutar mediante linea de comando en ambos proyectos: `> mvn clean spring-boot:run`  
-      3. Angular. Ejecutar mediante linea de comand: `> ng serve`  
+      3. Python. Ejecutar mediante linea de comando: `> uvicorn src.main:app --reload --port 8083`
+      4. Angular. Ejecutar mediante linea de comand: `> ng serve`, o ejecución de Angular con los back-end en Heroku: `> ng serve --prod`
+
+# :page_with_curl: Enunciado de la práctica
+> La practica consiste en ampliar de forma colaborativa una aplicación web: TPV.  
+> **NOTA. Todo el software deberá estar en ingles.**
+
+### 1. Enunciado de la práctica
+El enunciado se obtiene por sorteo entre los posibles existentes: https://github.com/miw-upm/betca-tpv/wiki.   
+
+La metodología se desarrolla en el proyecto: https://github.com/miw-upm/betca-tpv/projects/1, de forma centralizada para
+todos las historias.
+
+La historia debe organizarse en `tareas` mas pequeñas, cada una de ella asociada a un `issue`. Asignar el Hito. 
+Justo antes de empezar una tarea, asignar la estimación de tiempo: puntos. Al finalizar una tarea, asignarle el tiempo
+consumido y cerrarla.
+
+Utilizar un flujo de trabajo ramificado, visto en IWVG: Ecosistema o APAW. Acordaros de incluir #? 
+con el número del issue en los mensajes de los commits.
+
+### 2. Sprint 1: Interfaz de Usuario
+El primer `issue` es realizar el **Interfaz de Usuario** en Angular, asociarlo al hito `Evaluación: Interfaz de Usuario`, 
+con valores mock y sin atacar a los API.   
+Una vez finalizado, y antes de cerrarlo, se debe avisar al profesor mediante Slack, en un hilo privado, 
+hasta que el profesor de por correcto el UI.
+
+### 3. Sprint 2: Finalización de la Práctica
+El resto de la práctica se realizarán con los `issues` que se consideren necesarios, se recomienda entre 5-10. A modo de ejemplo,
+se propone una posible división:
+* Tarea (2..5). Una tarea por cada parte del enunciado diferenciada.
+* Tarea. Creación de entidades o modelos en BD.
+* Tarea. Refactorizar, reoordenar, simplificar...
+* Tarea. Bugs encontrados en la pruebas de aceptación.
+
+## Tareas transversales
+* Planificar antes los cambios a realizar, y cuando se tiene claro, actualizar la rama **issue#xx** con **develop** justo antes de empezar. 
+Realizar una **estimación temporal** y **anotarlo en la tarea**.
+* Cuando nos sentamos a trabajar, comprobar que la rama **issue#xx** está actualizada respecto a **develop**.
+* No es recomendable dejar de trabajar sin aportar a develop las mejoras, siempre **sin romper develop**.
+* Realizar aportaciones frecuentes a la rama **develop**, del código estable, aunque este a medias. 
+**Ojo** con los ficheros muy susceptibles de colisionar, como por ejemplo **app.module.ts**, **app-routing.module.ts**, 
+**home.component.ts**..., en este caso, modificarlos y subirlos a **develop** con rapidez.
+* Vigilar y pensar bien los **comentarios de los commits**, acordarse de añadir la referencia del issue: **#xx**.
+* Cuando se termina una **tarea** o **issue#xx**, añadir el **tiempo real** utilizado y cerrarlo.
+
+# :white_check_mark: Criterios de evaluación
+* Uso correcto del flujo de trabajo ramificado. **Hasta -2 ptos**. Los **warning** son avisos sin perdida de puntos.
+* Adecuación de la temporalidad de desarrollo según el enunciado. **Hasta -3 ptos**.
+* No se puede realizar un **findAll** y luego filtrar por código, se debe utilizar adecuadamente las **queries**.
+Las búsquedas, a cualquier nivel, resource, service, repository... siempre se coloca en el tipo devuelto. **Hasta -2 ptos**
+* Cobertura total >= 80%, cobertura de end-points = 100% (>90% código) , cobertura de servicios = 100% (>90% código). **Hasta -2 ptos**
+* Mantenimiento de calidad del código según Actions-CI y Sonar. Cuando IntelliJ subraya en naranja: OJO!!! puede ser 
+un indicio de un error cometido. Todos los aspectos vistos en teoría, y poniendo espeacial enfásis en:
+   * Formatear.
+      * Herramienta del IDE.
+      * Líneas en blanco.
+      * Ordenar métodos.
+      * Repasar nombres de clases, métodos, atributos, parámetros y variables.
+   * Sencillez del código.
+      * Simplificar el código.
+      * Eliminar comentarios.
+      * Estructuras anidadas: <3.
+      * Complejidad ciclomática: <8-12.
+   * Métricas.
+      * Paquete: <20 clases.
+      * Clases: <500-200 líneas, <20 métodos.
+      * Métodos: <3-4 parámetros, <15 líneas.
+   * Eliminar redundancias (copy & paste).
+   * Eliminar código muerto.
+   * Tratamiento de errores. 
+   * Calidad de la arquitectura (GRASP, SOLID, **patrones**...).
+* Gestión adecuada, completa y equilibrada (estimación, tiempo real...) durante el desarrollo. **Hasta -3 ptos**. 
+* Uso del ingles. **Hasta -1 pto**.
+
+# :clap: Entraga de la práctica
+Indicar como texto en la subida:
+* Nombre de la história.
+* Cuenta de github.
+* Valor del nombre que aparece en los commits del autor.
+* Número del último commit y fecha del mismo (dÍa-hora).
+* Tiempo total estimado, tiempo total real utilizado.
 
 # :book: Documentación del proyecto
 > Este proyecto es la práctica TPV desarrollada de forma colaborativa por todos los alumnos. Se parte de la versión `core`,
@@ -66,85 +158,16 @@ actualiza los cambios en el nivel de existencias de mercancías (STOCK) en la ba
 
 ![](./docs/betca-tpv.png)
 
-## Arquitectura del Front-end: Angular
+## Front-end: Angular
 ### Carpetas
 ![](docs/front-end-folders.png)
+![](docs/front-end-templates.png)
+![](docs/front-end-templates-shop.png)
 ### Módulos
 ![](docs/front-end-modules.png)
 ### Seguridad
-
-Se plantea en dos procesos:
-
-En primer lugar, se debe conseguir un API Key o token de tipo Json Web Token (JWT), accediendo al end-point `POST /users/token` mediante Basic Auth. Para ello se envía en la cabecera las credenciales (Authorization).
-Un token JWT está formado por tres partes:
-* Header. Se define el tipo.
-* Payload. Se establecen los datos que queramos que queden almacenados en el token, como el proveedor, el usuario, fecha
- de expiración… y los privilegios, o en nuestro caso, el rol del usuario. Esta información va codificada y firmada, pero no encriptada, y por lo tanto es una información pública y visible.
-* Signature. Es la firma, que depende de una clave secreta, para saber si el contenido de Payload es válido.
-> Authorization = Basic \<user>:\<pass><sub>Base64</sub>  
-> Authorization = Bearer \<header><sub>Base64</sub> .\<payload><sub>Base64</sub> .\<signature><sub>Base64</sub>
-
-Justo abajo os presentamos un token válido:
-```json
-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE2MDc0NDk2NzYsInJvbGUiOiJBRE1JTiIsImlzcyI6Im1pdy5qd3QuaXNzdWVyIiwibmFtZSI6ImFkbWluIiwiZXhwIjoxNjA3NDUzMjc2LCJpYXQiOjE2MDc0NDk2NzYsInVzZXIiOiI2In0.iFeIfrslgdwA53dv7-vg27GT7bcEINnqSKJsQJNB4rc
-```
-
-Tenéis más documentación de JWT (https://jwt.io).   
-Para su tratamiento utilizaremos la librerías de _auth0_ (https://auth0.com) para Angular.
-
-Se han desarrollado dos clases, _AuthService_, que nos realiza el login, y nos facilita métodos para conocer el alcance de 
-privilegios del usuario, además de guardar el token. Y también tenemos _TokenInterceptor_, 
-que añade automáticamente en cabecera el token, siempre que exista. Ambas clases se encuentran en el módulo _core_.
-
 ![](./docs/front-end-security.png)
-
-#### Enrutamiento con seguridad
-Hemos decidido realizar carga perezosa de los módulos, y para ello se delega al módulo de rutas la carga de los sub-módulos,
- en el momento que el usuario elige una sub-ruta.   
- 
-Para la seguridad, se ha implementado uno genérico (_RoleGuardService_), se configura en el propio enrutamiento los roles permitidos,
- y este a través de servicio de autenticación (_AuthService_) comprueba el rol actual del usuario, remitiendo a la página principal
-  si este no tuviera el rol requerido.
-
-```typescript
-const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'home'},
-  {path: 'home', loadChildren: () => import('./home/home.module').then(module => module.HomeModule)},
-  {path: 'shop', loadChildren: () => import('./shop/shop.module').then(module => module.ShopModule)}
-  // {path: 'home', component: HomeComponent},  // eager load
-  // {path: 'shop', component: ShopComponent}   // eager load
-];
-@NgModule({imports: [RouterModule.forRoot(routes)],exports: [RouterModule]})
-export class AppRoutingModule {}
-```
-
-```typescript
-const routes: Routes = [
-  {path: '', component: HomeComponent, children: []}
-];
-@NgModule({imports: [RouterModule.forChild(routes)],exports: [RouterModule]})
-export class HomeRoutingModule {}
-```
-
-```typescript
-const routes: Routes = [
-  {
-    path: '', // 'shop' to forRoot
-    component: ShopComponent,
-    canActivate: [RoleGuardService],
-    data: {roles: [Role.ADMIN, Role.MANAGER, Role.OPERATOR]},
-    children: [ // or path: shop/articles
-      {path: 'articles', component: ArticlesComponent},
-      {path: 'cashier-closed', component: CashierClosedComponent},
-      {path: 'cashier-opened', component: CashierOpenedComponent},
-      {path: 'providers', component: ProvidersComponent},
-      {path: 'tickets', component: TicketsComponent},
-    ]
-  }
-];
-@NgModule({imports: [RouterModule.forChild(routes)], exports: [RouterModule]})
-export class ShopRoutingModule {}
-```
+![](./docs/front-end-routing-security.png)
 
 ### Código
 
@@ -167,6 +190,57 @@ export class InputOverviewExample {
   }
   serviceMock(): Observable<string> {
     return of('Result');
+  }
+}
+```
+
+### Servicios mock
+```typescript
+export class ArticleService {
+  create(article: Article): Observable<Article> {
+    return of(article);
+  }
+  read(barcode: string): Observable<Article> {
+    return of({barcode: barcode, description: '...', retailPrice: 10, providerCompany: 'pro1'})
+  }
+  search(articleSearch: ArticleSearch): Observable<Article[]> {
+    return of([
+      {barcode: 123, description: '...', retailPrice: 10, providerCompany: 'pro1'},
+      {barcode: 345, description: '...', retailPrice: 10, providerCompany: 'pro2'},
+      {barcode: 678, description: '...', retailPrice: 10, providerCompany: 'pro1'}
+    ])
+  }
+```
+
+### Componentes con atributos y eventos
+`my-comp.component.html`
+```html
+<p>Hello {{user}}! <input type="button" value="Ok" (click)="onClick()"></p>
+```
+```typescript
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+@Component({ selector: 'app-my-comp', templateUrl: './my-comp.component.html' })
+export class MyCompComponent {
+   @Input() user = 'By default';
+   @Output() pressed = new EventEmitter<string>();
+   onClick(){
+      this.pressed.emit(this.user)
+   }
+}
+```
+`Utilización:`
+```html
+<app-my-comp></app-my-comp>
+<app-my-comp user="Value"></app-my-comp>
+<app-my-comp [user]=user></app-my-comp>
+<app-my-comp user="With event" (pressed)="onPressed($event)"></app-my-comp>
+```
+
+```typescript
+export class AppComponent  {
+  user = "Variable";
+  onPressed(value:string){
+    alert(value);
   }
 }
 ```
@@ -339,12 +413,22 @@ Conexión con **Heroku**:
 }
 ```
 
-## Arquitectura del Back-end: Spring-User mediante Arquitectura por Capas
+## Back-end: User
+> Spring mediante Arquitectura por Capas
+
 ### Paquetes
 ![](docs/back-end-user-packages.png)
 ### Clases
 ![](docs/back-end-user-classes.png)
-### Carpetas
-![](docs/back-end-user-folders.png)
-## Arquitectura del Front-end: Spring-Core mediante Arquitectura Hexagonal
+ 
+## Back-end: Core
+> Spring mediante Arquitectura Hexagonal
+### Paquetes
+![](docs/back-end-core-packages.png)
+### Clases
+![](docs/back-end-core-classes.png)
 
+## Back-end: Customer Support
+> Python mediante Arquitectura Seudo-Hexagonal
+### Paquetes
+![](docs/back-end-customer-support-packages.png)
