@@ -198,8 +198,8 @@ interface GiftTicket {number:number; creationDate:date; baseTax:number; taxValue
 - [ ] en el servicio de facturas, se podrá crear una factura negativa a partir de una devolución. Se debe sincronizar con la práctica de `Ticket`.
 
 ## `story: Messengers`
-> **Autor: ???**   
-> **GitHub: [@???](https://github.com/???)**   
+> **Autor: Miguel García   
+> **GitHub: [miguelgarse](https://github.com/miguelgarse)**   
 > **User on commit: `???`**
 
 Crear notas internas entre vendedores.
